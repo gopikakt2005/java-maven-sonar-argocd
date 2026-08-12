@@ -80,7 +80,7 @@ pipeline {
                 git config user.name "${GIT_USER_NAME}"
 
                 # 5. Update the image tag in your manifest file
-                sed -i "s|image: .*|image: gopikakt2005/ultimate-cicd:${BUILD_NUMBER}|g" java-maven-sonar-argocd/spring-boot-app-manifest/deployment.yml
+                sed -i "s|image: .*|image: gopikakt2005/ultimate-cicd:${BUILD_NUMBER}|g" java-maven-sonar-argocd/spring-boot-app-manifests/deployment.yml
 
                 # 6. Commit and Push
                 git add spring-boot-app-manifest/deployment.yml
