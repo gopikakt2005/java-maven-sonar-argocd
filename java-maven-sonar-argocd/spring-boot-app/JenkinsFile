@@ -83,7 +83,7 @@ pipeline {
                 sed -i "s|image: .*|image: gopikakt2005/ultimate-cicd:${BUILD_NUMBER}|g" java-maven-sonar-argocd/spring-boot-app-manifests/deployment.yml
 
                 # 6. Commit and Push
-                git add java-maven-sonar-argocd/spring-boot-app-manifests/deployment.ym
+                git add java-maven-sonar-argocd/spring-boot-app-manifests/deployment.yml
                 git commit -m "Update static site image tag to ${BUILD_NUMBER} [skip ci]" || echo "No changes to commit"
                 git push origin main
             '''
